@@ -1,5 +1,6 @@
 ---
 import Link from "../components/Link.astro";
+import pslogo from "../assets/icons/pslogo.svg";
 
 export interface Props {
 	title: string;
@@ -28,6 +29,10 @@ const { title } = Astro.props as Props;
 			href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
 
 		<style>
@@ -40,8 +45,7 @@ const { title } = Astro.props as Props;
 		<nav
 			class="h-16 flex items-center container mx-auto fixed z-10 left-0 right-0 bg-neutral-900"
 		>
-			<img src="/assets/icons/pslogo.svg" alt="Prateek Soni" class="h-10 w-10"
-			/>
+			<img src={pslogo} alt="Prateek Soni" class="h-10 w-10" />
 			<div class="flex-1 flex justify-end items-center gap-8 text-neutral-400">
 				<Link href="/" label="Home" path="/" />
 				<Link href="/about" label="About" path="/about" />

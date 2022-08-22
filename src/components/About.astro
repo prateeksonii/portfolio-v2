@@ -1,0 +1,129 @@
+---
+import type { SimpleIcon } from "simple-icons";
+import {
+  siReact,
+  siHtml5,
+  siCss3,
+  siJavascript,
+  siNextdotjs,
+  siRemix,
+  siTailwindcss,
+  siPrisma,
+  siTypescript,
+  siOpenjdk,
+  siSpring,
+  siFigma,
+} from "simple-icons/icons";
+
+import react from "../assets/icons/tools/react.svg";
+
+interface Tool {
+  icon: SimpleIcon;
+  label: string;
+}
+
+const tools: Tool[] = [
+  {
+    label: "HTML",
+    icon: siHtml5,
+  },
+  {
+    label: "CSS",
+    icon: siCss3,
+  },
+  {
+    label: "JS",
+    icon: siJavascript,
+  },
+  {
+    label: "React",
+    icon: siReact,
+  },
+  {
+    label: "Next",
+    icon: siNextdotjs,
+  },
+  {
+    label: "Remix",
+    icon: siRemix,
+  },
+  {
+    label: "Tailwind",
+    icon: siTailwindcss,
+  },
+  {
+    label: "Prisma",
+    icon: siPrisma,
+  },
+  {
+    label: "TS",
+    icon: siTypescript,
+  },
+  {
+    label: "Java",
+    icon: siOpenjdk,
+  },
+  {
+    label: "Spring",
+    icon: siSpring,
+  },
+  {
+    label: "Figma",
+    icon: siFigma,
+  },
+];
+---
+
+<section class="max-w-[70ch] mx-auto">
+  <h1 class="text-5xl font-head">About</h1>
+  <div class="p-8"></div>
+  <h2 class="text-3xl font-head">Background</h2>
+  <div class="mt-8 space-y-8 text-xl leading-relaxed">
+    <p>
+      Hey there! I'm Prateek Soni, an experienced software developer working at
+      IBM.
+    </p>
+    <p>
+      I like to spend my time designing and building solutions, engaging with
+      the community, as well as pushing myself to learn more through pair
+      programming and group projects.
+    </p>
+    <p>
+      I am seeking employment that will make best use of my skills and allow me
+      to develop them further. I am determined, enthusiastic and confident in
+      working independently or with a team.
+    </p>
+  </div>
+
+  <div
+    class="mt-36 grid grid-cols-[1fr_auto_1fr] gap-8 justify-items-stretch place-items-center"
+  >
+    <div class="border border-blue-400 flex-1"></div>
+    <h2 class="text-3xl font-head w-max">Tools & Technologies</h2>
+    <div class="border border-blue-400 flex-1"></div>
+  </div>
+
+  <p class="mt-24 text-xl leading-relaxed text-center">
+    One of my favourite things since I starting to learn to code has discovering
+    all of the amazing tools and abstractions developers have created to make
+    theirs and other developers' lives easier. Here are some of the tools I use
+    most frequently.
+  </p>
+</section>
+
+<div class="mt-24 grid grid-cols-4 gap-12 place-items-center mb-36">
+  {
+    tools.map((tool) => (
+      <div class="flex flex-col text-5xl font-head">
+        <img src={react} alt="" />
+        {tool.label}
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  svg {
+    color: white;
+  }
+</style>
