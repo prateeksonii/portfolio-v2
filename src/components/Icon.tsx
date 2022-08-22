@@ -13,13 +13,14 @@ const Icon: React.FC<IconProps> = ({
   label,
   hoverColor,
 }) => {
-  const css = useMemo(() => `block text-6xl transition-all`, []);
-
-  const appliedCss = css + ` group-hover:text-${hoverColor}-400`;
+  const css = useMemo(
+    () => `block text-6xl transition-all group-hover:text-${hoverColor}-400`,
+    []
+  );
 
   return (
     <div className={`flex flex-col font-head items-center gap-4 group`}>
-      <IconComponent className={appliedCss} />
+      <IconComponent className={css} />
       <span className={`text-2xl group-hover:text-${hoverColor}-400`}>
         {label}
       </span>
