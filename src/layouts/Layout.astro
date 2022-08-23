@@ -42,15 +42,19 @@ const { title } = Astro.props as Props;
 		</style>
 	</head>
 	<body>
-		<nav
-			class="h-16 flex items-center container mx-auto fixed z-10 left-0 right-0 bg-neutral-900"
-		>
-			<img src={pslogo} alt="Prateek Soni" class="h-10 w-10" />
-			<div class="flex-1 flex justify-end items-center gap-8 text-neutral-400">
-				<Link href="/" label="Home" path="/" />
-				<Link href="/about" label="About" path="/about" />
+		<nav class="h-16 fixed z-10 left-0 right-0 bg-neutral-900 shadow-lg">
+			<div class="flex items-center container mx-auto h-full">
+				<img src={pslogo} alt="Prateek Soni" class="h-10 w-10" />
+				<div
+					class="flex-1 flex justify-end items-center gap-8 text-neutral-400"
+				>
+					<Link href="/" label="Home" path="/" />
+					<Link href="/about" label="About" path="/about" />
+				</div>
 			</div>
 		</nav>
-		<slot />
+		<main class="pt-24">
+			<slot />
+		</main>
 	</body>
 </html>
