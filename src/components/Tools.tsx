@@ -12,7 +12,7 @@ import {
   SiJava,
   SiSpringboot,
   SiFigma,
-} from "react-icons/si";
+} from "react-icons/si/index";
 import Icon from "./Icon";
 
 interface Tool {
