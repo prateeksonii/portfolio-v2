@@ -1,0 +1,52 @@
+---
+import ibmLogo from "../assets/ibm.svg";
+import indshine from "../assets/indshine.webp";
+import iaugmentor from "../assets/iaugmentor.webp";
+
+interface Work {
+  id: number;
+  companyName: string;
+  role: string;
+  logoUrl: string;
+}
+
+const works: Work[] = [
+  {
+    id: 1,
+    companyName: "IBM",
+    role: "Application Developer",
+    logoUrl: ibmLogo,
+  },
+  {
+    id: 2,
+    companyName: "Indshine",
+    role: "Software Development Intern",
+    logoUrl: indshine,
+  },
+  {
+    id: 3,
+    companyName: "IAugmentor Labs",
+    role: "Web Development Intern",
+    logoUrl: iaugmentor,
+  },
+];
+---
+
+<section
+  class="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center"
+>
+  <h1 class="text-4xl font-head">Where I&apos;ve worked at</h1>
+
+  <div class="flex items-center justify-evenly mt-24 gap-8 w-full flex-wrap">
+    {
+      works.map((work) => (
+        <div class="space-y-2 group">
+          <div class="text-5xl font-head group-hover:text-blue-400 transition-all hover:animate-bounce cursor-default">
+            {work.companyName}
+          </div>
+          <p class="text-xl">{work.role}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
